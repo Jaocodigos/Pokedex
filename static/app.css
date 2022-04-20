@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    margin: 10px auto;
+    color: #d4110b;
+    font-family: 'Muli', sans-serif;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    width: 60%;
+    height: 300px;
+    max-height: 500px;
+    margin-top: 30px;
+    margin-left: 20%;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    position:relative;
+}
+
+body{
+    background-color: #f0443e;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
+    justify-itens: center;
+    position: absolute;
+    min-width: 150px;
+}
+label{
+    margin: 30px;
+    font-family: 'Muli', sans-serif;
+}
+
+button{
+  background-color: #d4110b;
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 18px;
+  padding: 18px 50px;
+  letter-spacing: 1px;
+  margin: 30px auto;
+}
+}
+
+input{
+    margin: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+.poke-img{
+    min-width: 300px;
+    background-color: #d4110b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.poke-form{
+    display: flex;
+    min-width: 250px;
+    width: 350px;
+    justify-content: center;
+    align-itens: center;
+    margin: 0 auto;
+}
+
+.poke-label{
+  font-family: 'Muli', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+
+}
+
+.poke-input {
+  font-family: 'Muli', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 70%;
+  height: 60px;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.poke-input:placeholder-shown + .poke-label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+.imagem-dex{
+    height: 70%;
+    width: 80%;
+    margin: 10px auto;
+
+}
+
+.poke-img{
+    flex-direction: column;
+    display:flex;
+    position: relative;
+}
+
+.Git{
+    margin: 10px auto;
+}
+
+.poke-desc{
+    color: black;
+    background-color: white;
+    letter-spacing: 1px;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+    border: solid;
+}
+
+tr{
+    font-family: 'Muli', sans-serf;
+    font-size: 16px;
+    text-align: center;
+}

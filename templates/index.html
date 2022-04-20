@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <link href="{{ url_for('static', filename='app.css') }}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="poke-img">
+            <img src="{{ dex }}" class="imagem-dex">
+            <table class="poke-desc">
+            <tbody>
+                    <tr>
+                        <td>Type</td>
+                        {% for tips in type %}
+                            <td>{{ tips }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Habilities</td>
+                        {% for skill in habs %}
+                            <td>{{ skill }}</td>
+                        {% endfor %}
+                    </tr>
+            </table>
+
+        </div>
+        <div class="poke-form">
+            <form action="{{url_for('search')}} "method="post">
+                <h1>{{ titulo }}</h1>
+                <label class="poke-label">Que Pokemon está buscando?</label>
+                <input type="text" name="poke" placeholder="Ex:Pikachu" class="poke-input">
+                <button type="submit" name="search">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
