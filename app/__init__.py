@@ -13,20 +13,19 @@ def index():
 
 @app.route('/buscar', methods=['POST', ])
 def search():
-    global habs
-    global type
-    global deximg
     nome = str(request.form['poke'])
+
     buscar = f'https://pokeapi.co/api/v2/pokemon/{nome}'
     res = requests.get(buscar)
     pokemon = res.json()
     id = pokemon['id']
     deximg = f'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png'
+    type = []
+    habs = []
     for abi in pokemon['abilities']:
-        habs = [abi['ability']['name']]
+        habs.append(abi['ability']['name'])
     for tip in pokemon['types']:
-        type = [tip['type']['name']]
-        print(type)
+        type.append(tip['type']['name'])
     return render_template('index.html', titulo='Pokedex', type=type, habs=habs, dex=deximg)
 
 

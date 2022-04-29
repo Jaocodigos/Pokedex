@@ -133,7 +133,7 @@ input{
 
 .poke-desc{
     color: black;
-    background-color: white;
+    background-color: black;
     letter-spacing: 1px;
     font-family: 'Muli', sans-serif;
     font-size: 18px;
@@ -146,4 +146,33 @@ tr{
     font-family: 'Muli', sans-serf;
     font-size: 16px;
     text-align: center;
+}
+
+.tipoback{
+    background-color: #737170;
+    border-radius: 4px;
+    color: #45d4ff;
+    font-size: 18px;
+}
+
+.habsback{
+    background-color: #737170;
+    border-radius: 4px;
+    color: #45d4ff;
+    font-size: 18px;
+
+}
+
+.tipovar{
+    font-size: 14px;
+    border-radius: 4px;
+    color: white;
+    background-color: #a9aaab;
+}
+
+.habsvar{
+    font-size: 14px;
+    border-radius: 4px;
+    color: white;
+    background-color: #a9aaab;
 }
