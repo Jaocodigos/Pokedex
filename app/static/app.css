@@ -10,16 +10,16 @@
 h1{
     margin: 10px auto;
     color: #d4110b;
-    font-family: 'Muli', sans-serif;
+
 }
 
 .container{
-    background-color: white;
+    background-color: #403f3f;
     display: flex;
     width: 60%;
     height: 300px;
     max-height: 500px;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: 20%;
     flex-direction: row;
     border-radius: 20px;
@@ -41,20 +41,17 @@ form{
 }
 label{
     margin: 30px;
-    font-family: 'Muli', sans-serif;
+
 }
 
-button{
-  background-color: #d4110b;
+.dex-btn{
   border: 0;
   border-radius: 30px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-size: 18px;
-  padding: 18px 50px;
   letter-spacing: 1px;
-  margin: 30px auto;
-}
+  margin: 30px 70px;
+
 }
 
 input{
@@ -80,8 +77,10 @@ input{
     margin: 0 auto;
 }
 
+
+
 .poke-label{
-  font-family: 'Muli', sans-serif;
+  color: #fac673;
   font-size: 1.2rem;
   margin-left: 2rem;
   margin-top: 0.7rem;
@@ -92,7 +91,7 @@ input{
 }
 
 .poke-input {
-  font-family: 'Muli', sans-serif;
+
   color: #333;
   font-size: 1.2rem;
   margin: 0 auto;
@@ -133,32 +132,33 @@ input{
 
 .poke-desc{
     color: black;
-    background-color: black;
+    background-color: #403f3f;
     letter-spacing: 1px;
-    font-family: 'Muli', sans-serif;
+
     font-size: 18px;
     margin: 10px;
     border-radius: 5px;
-    border: solid;
+
 }
 
 tr{
-    font-family: 'Muli', sans-serf;
+
     font-size: 16px;
     text-align: center;
 }
 
 .tipoback{
-    background-color: #737170;
+    background-color: #ff;
     border-radius: 4px;
-    color: #45d4ff;
+    color: #fac673;
     font-size: 18px;
 }
 
+
 .habsback{
-    background-color: #737170;
+    background-color: #ff;
     border-radius: 4px;
-    color: #45d4ff;
+    color: #fac673;
     font-size: 18px;
 
 }
@@ -175,4 +175,240 @@ tr{
     border-radius: 4px;
     color: white;
     background-color: #a9aaab;
+}
+
+
+.fire{
+    background-color: #ff4400;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.water{
+    background-color: #003cff;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.electric{
+    background-color: #ffc800;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.fly{
+    background-color: #f2e8c2;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.rock{
+    background-color: #2b2b2b;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.ground{
+    background-color: #361000;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.ice{
+    background-color: #009fc7;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.grass{
+    background-color: #059600;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.psychic{
+    background-color: #d10478;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+.ghost{
+    background-color: #5304d1;
+    border-radius: 4px;
+    color: #ffae00;
+    font-size: 18px;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  background: #630101;
+  clip-path: circle(25px at calc(100% - 55px) 55px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(80%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 0px;
+  /* left: 20px; */
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+  background: #820101;
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  color: #fff;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  background: #630101;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #630101;
+   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #fff;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 70%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+.animate{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 50px 5px 50px;;
+  color: #fac673;
+  border-radius: 50px;
+  background: #d4110b;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.animate:after{
+  position: absolute;
+  content: "";
+  background: #630101;
+   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+.animate:hover:after{
+  transform: scaleY(1);
+}
+.animate:hover{
+  color: #ffad29;
+}
+
+@keyframes rotate {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }
