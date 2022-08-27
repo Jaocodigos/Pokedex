@@ -17,6 +17,7 @@
         <li><a href="#">History</a></li>
         <li><a href="#">Github</a></li>
         <li><a href="#">Feedback</a></li>
+        <li><a href="#">PokeAPI</a></li>
       </ul>
     </div>
 
@@ -52,13 +53,14 @@
 
         </div>
         <div class="poke-form">
-            <form action="{{url_for('search')}}" method="post" style="align-itens: flex-end; justify-content:flex-end;">
+            <form action="{{url_for('pokedex.search')}}" method="post" style="align-itens: flex-end; justify-content:flex-end;">
                 <h1>{{ titulo }}</h1>
                 <label class="poke-label">Que Pokemon está buscando?</label>
                 <input type="text" name="poke" placeholder="Ex:Pikachu" class="poke-input">
                 <button class="dex-btn animate" type="submit" name="search" onclick="searchpoke">Buscar</button>
             </form>
         </div>
+
     </div>
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>

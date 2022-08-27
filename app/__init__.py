@@ -1,39 +1,29 @@
-from flask import Flask, render_template, session, flash, url_for, request, redirect
+from flask import Flask
+from os import environ
+from app.config import get_config
 import requests
 
 app = Flask(__name__)
 
-app.secret_key = 'thebestofthebests'
+# Get flask configuration
+mode = environ['FLASK_ENV']
+if mode not in ['testing', 'development']:
+    raise ValueError("Invalid env.")
+app.config.from_object(get_config(mode))
 
 
-@app.route('/')
-def index():
-    return render_template('index.html', titulo='Pokedex v0.2', dex=url_for('static', filename='pokeball.png'))
+# Factory
+def app_create():
 
+    from app.models import db
+    from app.schemas import schema
+    db.init_app(app)
+    schema.init_app(app)
 
-@app.route('/dex', methods=['POST', ])
-def search():
-    nome = str(request.form['poke'])
+    from app.resources import pokedex
+    app.register_blueprint(pokedex)
 
-    buscar = f'https://pokeapi.co/api/v2/pokemon/{nome}'
-    res = requests.get(buscar)
-    if res:
-        pokemon = res.json()
-        id = pokemon['id']
-        deximg = f'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png'
-        type = []
-        habs = []
-        for abi in pokemon['abilities']:
-            habs.append(abi['ability']['name'])
-        for tip in pokemon['types']:
-            type.append(tip['type']['name'])
-        return render_template('index.html', titulo='Pokedex v0.2', type=type, habs=habs, dex=deximg)
-    flash("O pokémon digitado não existe!")
-    return render_template('index.html', titulo='Pokedex v0.2')
+    return app
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
-    #dex()
 
 
