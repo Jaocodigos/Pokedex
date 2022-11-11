@@ -3,7 +3,7 @@ from app.resources import pokedex
 import requests
 
 
-@pokedex.route('/')
+@pokedex.route('/', methods=['GET'])
 def index():
     return render_template('index.html', titulo='Pokedex v0.2', dex=url_for('static', filename='pokeball.png'))
 
