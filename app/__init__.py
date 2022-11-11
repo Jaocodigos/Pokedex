@@ -20,8 +20,8 @@ def app_create():
     db.init_app(app)
     schema.init_app(app)
 
-    from app.resources import pokedex
-    app.register_blueprint(pokedex)
+    from app.resources import poke
+    app.register_blueprint(poke)
 
     return app
 
