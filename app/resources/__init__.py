@@ -1,5 +1,7 @@
 from flask import Blueprint
 
-pokedex = Blueprint('pokedex', __name__)
+poke = Blueprint('pokedex', __name__)
 
-from app.resources.pokedex import *
+from app.resources.pokedex.pokedex import *
+from app.resources.feedback.feedback import *
+from app.resources.history.history import *

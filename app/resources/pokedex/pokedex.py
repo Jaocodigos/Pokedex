@@ -1,14 +1,14 @@
 from flask import Flask, render_template, session, flash, url_for, request, redirect
-from app.resources import pokedex
+from app.resources import poke
 import requests
 
 
-@pokedex.route('/', methods=['GET'])
+@poke.route('/', methods=['GET'])
 def index():
     return render_template('index.html', titulo='Pokedex v0.2', dex=url_for('static', filename='pokeball.png'))
 
 
-@pokedex.route('/dex', methods=['POST', ])
+@poke.route('/dex', methods=['POST', ])
 def search():
     nome = str(request.form['poke']).lower()
 
