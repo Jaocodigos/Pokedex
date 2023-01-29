@@ -1,10 +1,6 @@
-{% extends "template.html" %}
-{% block content %}
-<style>
-
-  body {
+body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #f0443e;
+  background-color: #3c373e;
   font-weight: 300; }
 
 p {
@@ -30,16 +26,9 @@ h2 {
   color: #fff; }
 
 .custom-table {
-  background-color: #820101;
-  min-width: 600px;
-  width: 1100px;
-  margin-top: 50px;
-  margin-left: 10%;
-  border-radius: 6px;
-  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.4);}
+  min-width: 900px; }
   .custom-table thead tr, .custom-table thead th {
     padding-bottom: 30px;
-    padding-top: 10px;
     border-top: none;
     border-bottom: none !important;
     color: #fff;
@@ -86,50 +75,3 @@ h2 {
     margin-bottom: 15px; }
     .custom-table .box td, .custom-table .box th {
       border: none !important; }
-
-</style>
-      <div class="table-responsive">
-
-        <table class="table custom-table">
-          <thead>
-            <tr>
-
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Type</th>
-              <th scope="col">Hability</th>
-              <th scope="col">Height</th>
-              <th scope="col">Weight</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr scope="row">
-              <td>01</td>
-              <td><a href="#">Bulbasaur</a></td>
-              <td><a>Grass</a></td>
-              <td>Seeds</td>
-              <td>50cm</td>
-              <td>80lbs</td>
-            </tr>
-            <tr>
-              <td>04</td>
-              <td><a href="#">Charmander</a></td>
-              <td><a>Fire</a></td>
-              <td>Burn</td>
-              <td>80cm</td>
-              <td>100lbs</td>
-            </tr>
-            <tr>
-              <td>07</td>
-              <td><a href="#">Squirtle</a></td>
-              <td><a>Water</a></td>
-              <td>Waterpool</td>
-              <td>68cm</td>
-              <td>87lbs</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-{% endblock %}
