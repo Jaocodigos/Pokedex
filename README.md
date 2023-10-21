@@ -1,2 +1,2 @@
 # Pokedex
-Uma Pokedex usando Flask e consumindo os serviços da PokeAPI.
+An Pokedex demo, using Flask and consuming PokeAPI services.
