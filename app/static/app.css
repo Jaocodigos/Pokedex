@@ -258,7 +258,7 @@ tr{
   font-family: 'Oswald', sans-serif;
 }
 .wrapper{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -274,6 +274,7 @@ tr{
 #active:checked ~ .wrapper{
   clip-path: circle(80%);
 }
+
 .menu-btn{
   position: absolute;
   z-index: 2;
@@ -288,18 +289,37 @@ tr{
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
   background: #820101;
   transition: all 0.3s ease-in-out;
 }
+
+.menu-btn:after{
+  position: absolute;
+  content: "";
+  background: #630101;
+  /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+
 #active:checked ~ .menu-btn{
   color: #fff;
+
 }
 #active:checked ~ .menu-btn i:before{
   content: "\f00d";
 }
+
 .wrapper ul{
   position: absolute;
   top: 50%;
@@ -386,12 +406,12 @@ input[type="checkbox"]{
   position: absolute;
   content: "";
   background: #630101;
-   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
   /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
   width: 104%;
   height: 110%;
   left: -2%;
-  top: -5%; /* if the font is 'Oswald'*/
+  top: -5%;
   border-radius: 50px;
   transform: scaleY(0);
   z-index: -1;
@@ -401,6 +421,19 @@ input[type="checkbox"]{
 .animate:hover:after{
   transform: scaleY(1);
 }
+
+.animate:hover:after{
+  transform: scaleY(1);
+}
+
+.menu-btn:hover:after{
+  transform: scaleY(1);
+}
+
+.menu-btn:hover:after{
+  transform: scaleY(1);
+}
+
 .animate:hover{
   color: #fff;
 }
@@ -428,3 +461,5 @@ input[type="checkbox"]{
     position:relative;
     min-width: 500px;
 }
+
+
